@@ -1,4 +1,6 @@
 import 'dart:io';
+//import 'package:flutter_email_sender/flutter_email_sender.dart';
+//import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutterpdf3/pdf_viewer.dart';
 import 'package:pdf/widgets.dart' as pdfLib;
 import 'package:path_provider/path_provider.dart';
@@ -72,6 +74,56 @@ class _MyHomePageState extends State<MyHomePage> {
               <String>['Dato2', 'VNT002', '30', '200 Bs'],
               <String>['Dato3', 'VNT003', '40', '500 Bs'],
               <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
+              <String>['Nombre', 'codVenta', 'Cantidad', 'Precio'],
+              <String>['Dato1', 'VNT001', '50', '100 Bs'],
+              <String>['Dato2', 'VNT002', '30', '200 Bs'],
+              <String>['Dato3', 'VNT003', '40', '500 Bs'],
+              <String>['Dato4', 'VNT004', '15', '10 Bs'],
             ],
           ),
         ],
@@ -80,14 +132,30 @@ class _MyHomePageState extends State<MyHomePage> {
 
     
 
-    final dir = (await getApplicationDocumentsDirectory()).path;
-    final String path = '$dir/mypdf.pdf';
+    
+
+    //final dir = (await getApplicationDocumentsDirectory()).path;
+    //final dir = (await getTemporaryDirectory());
+    final dir = (await getExternalStorageDirectory()).path;
+    final String path = '$dir/mypdf2.pdf';
     final File file = File(path);
     await file.writeAsBytes(pdf.save());
+//    file.writeAsBytesSync(bytes)
 
     print(dir);
     print(path);
     print(file);
+
+//    final Email email = Email(
+//      body: 'Email body',
+//      subject: 'Email subject',
+//      recipients: ['cristian.fchq@example.com'],
+//      cc: ['cristian.fchq@example.com'],
+//      bcc: ['cristian.fchq@example.com'],
+//      attachmentPath: path,
+//    );
+//
+//    await FlutterEmailSender.send(email);
 
 
     Navigator.of(context).push(
